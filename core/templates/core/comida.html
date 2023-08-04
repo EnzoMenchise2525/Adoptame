@@ -1,0 +1,227 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Krub:wght@300;600&display=swap" rel="stylesheet">
+        
+        <title>Tienda de Gatos</title>
+        <script src="https://kit.fontawesome.com/f308d8c25e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'core/css/style.css'%}">
+        
+  
+      
+    </head>
+
+<body>
+    
+        <div class="header__superior">
+
+            <div class="logo">
+                <img src="{% static 'core/img/patalogo.png'%}" alt="logo" width="2em">
+            </div>
+            <div class="titulo">
+                <h1><b>AdoptamePliss</b></h1>
+            </div>
+    
+        <!--Buscar-->    
+    
+            <div class="search">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+    
+        </div>
+
+        <header>
+            <nav>
+                <!--Menu-->
+                <div class="container__menu ">
+    
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                
+                
+                <nav>
+                    <ul>
+                        
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="#">Adoptame</a>
+                            <ul>
+                                <li><a href="{% url 'perro' %}">Perro</a></li>
+                                <li><a href="{% url 'gato' %}">Gato</a></li>
+                            </ul>
+    
+                        <li><a href="#">Tienda</a>
+                            <ul>
+                                <li><a href="{% url 'cosas_perros' %}">Cosas de Perro</a></li>
+                                <li><a href="{% url 'cosas_gatos' %}">Cosas de Gato</a></li>
+                                <li><a href="{% url 'comida' %}">Comida</a></li>
+                            </ul>
+                        <li><a href="{% url 'veterinario' %}">Veterinario</a></li>
+                        <li><a href="{% url 'formulario_de_contacto' %}">Contacto</a></li>
+                        <li>
+                        <nav class="inicioseccion">
+                            <button class="btn btn-outline-success "><a href="{% url 'iniciar_sesion' %}"><img src="{%static 'core/img/icons8-usuario-64.png'%}" alt=""></a></button>
+                        </nav>
+                        </li>
+                        </li>
+                        </li>
+                    </ul>
+                 </nav>
+                </input>
+            </div>
+        </div>
+            </nav>
+        </header>
+
+
+    <section>
+        <div class="container">
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="{%static 'core/img/mascotas1.jpg'%}" alt="adoptame" style="width:100%;">
+                    </div>
+
+                    <div class="item">
+                        <img src="{%static 'core/img/mascotas2.jpg'%}" alt="adoptame" style="width:100%;">
+                    </div>
+
+                    <div class="item">
+                        <img src="{%static 'core/img/mascotas3.jpg'%}" alt="adoptame" style="width:100%;">
+                    </div>
+
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <br/>
+    <hr/>
+    <div class="separacion"> 
+    <h3 class="letra">Comida para perros: <a href="#productos">↑</a></h3>
+    </div>
+    <hr/>
+    
+    <section id="comidaPerro">
+    
+        <article class="articulo">
+            <h4>Comida NutraGold</h4>
+            <p>$50.000</p>
+            <img src="{%static 'core/img/comidaperro1.jpg'%}" alt="ag7" width="240em">
+        </article>
+    
+        <article class="articulo">
+            <h4>Comida EarthBorn</h4>
+            <p>$38.000</p>
+            <img src="{%static 'core/img/comidaperro2.jpg'%}" alt="ag7" width="240em">
+        </article>
+    
+        <article class="articulo">
+            <h4>Comida Oven Braken Perro</h4>
+            <p>$40.000</p>
+            <img src="{%static 'core/img/comidaperro3.jpg'%}" alt="ag7" width="240em">
+        </article>
+    
+        <article class="articulo">
+            <h4>Comida Taste of the wild Perro</h4>
+            <p>$48.000</p>
+            <img src="{%static 'core/img/comidaperro5.jpg'%}" alt="ag7" width="240em">
+        </article>
+    
+    </section>
+    
+    <br/>
+    <hr/>
+    <div class="separacion"> 
+    <h3 class="letra">Comida para gatos: <a href="#productos">↑</a></h3>
+    </div>
+    <hr/>
+    
+    <section id="comidaGato">
+    
+        <article class="articulo">
+            <h4>Comida Acana</h4>
+            <p>$50.000</p>
+            <img src="{%static 'core/img/comidagato1.jpg'%}" alt="ag7" width="240em">
+        </article>
+    
+        <article class="articulo">
+            <h4>Comida Bravery</h4>
+            <p>$45.000</p>
+            <img src="{%static 'core/img/comidagato2.jpg'%}" alt="ag7" width="240em">
+        </article>
+    
+        <article class="articulo">
+            <h4>Comida josera</h4>
+            <p>$42.000</p>
+            <img src="{%static 'core/img/comidagato3.jpg'%}" alt="ag7" width="240em">
+        </article>
+    
+        <article class="articulo">
+            <h4>Comida ND</h4>
+            <p>$45.000</p>
+            <img src="{%static 'core/img/comidagato5.jpg'%}" alt="ag7" width="240em">
+        </article>
+    </section>
+      
+
+            <footer>
+                <!--pie de pagina-->
+    
+                <!--informacion de las redes sociales-->
+                <hr>
+                <nav class="informaciones">
+                    <!--es para que aparesca una linea separadora de la pagina con la 
+                información de contacto-->
+                    <br>
+                    <p>si quieres saber mas de nosotros contactanos:</p>
+                    <section class="buttons">
+                        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i> </a>
+                        <a href="#" class="instagram"><i class="fab fa-instagram"></i> </a>
+                    </section>
+                    </hr>
+                </nav>
+            </footer>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    
+</body>
+
+</html>

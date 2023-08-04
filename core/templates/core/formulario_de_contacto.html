@@ -1,0 +1,175 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Krub:wght@300;600&display=swap" rel="stylesheet">
+        
+        <title>AdoptamePliss</title>
+        <script src="https://kit.fontawesome.com/f308d8c25e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'core/css/style.css'%}">
+        
+  
+      
+    </head>
+
+
+
+<body>
+
+        <div class="header__superior">
+
+            <div class="logo">
+                <img src="{% static 'core/img/patalogo.png'%}" alt="logo" width="2em">
+            </div>
+            <div class="titulo">
+                <h1><b>AdoptamePliss</b></h1>
+            </div>
+    
+        <!--Buscar-->    
+    
+            <div class="search">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+    
+        </div>
+
+
+        <header>
+            <nav>
+                <!--Menu-->
+                <div class="container__menu ">
+    
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                
+                
+                <nav>
+                    <ul>
+                        
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="#">Adoptame</a>
+                            <ul>
+                                <li><a href="{% url 'perro' %}">Perro</a></li>
+                                <li><a href="{% url 'gato' %}">Gato</a></li>
+                            </ul>
+    
+                        <li><a href="#">Tienda</a>
+                            <ul>
+                                <li><a href="{% url 'cosas_perros' %}">Cosas de Perro</a></li>
+                                <li><a href="{% url 'cosas_gatos' %}">Cosas de Gato</a></li>
+                                <li><a href="{% url 'comida' %}">Comida</a></li>
+                            </ul>
+                        <li><a href="{% url 'veterinario' %}">Veterinario</a></li>
+                        <li><a href="{% url 'formulario_de_contacto' %}">Contacto</a></li>
+                        <li>
+                        <nav class="inicioseccion">
+                            <button class="btn btn-outline-success "><a href="{% url 'iniciar_sesion' %}"><img src="{%static 'core/img/icons8-usuario-64.png'%}" alt=""></a></button>
+                        </nav>
+                        </li>
+                        </li>
+                        </li>
+                    </ul>
+                 </nav>
+                </input>
+            </div>
+        </div>
+            </nav>
+        </header>
+
+
+    <main>
+        <div class="container2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Formulario de Contacto</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" id="signupForm">
+
+                        <div class="form-group">
+                            <label for="fullname" class="col-sm-2 control-label">Nombre y apellido</label>
+                            <div class="col-sm-3">
+                                <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Ej: Juan Perez" required="">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">Correo electronico</label>
+                            <div class="col-sm-5">
+                                <input type="text" id="email" name="email" class="form-control" placeholder="Ej: juanito@gmail.com" required="">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="col-sm-2 control-label">Número Celular</label>
+                            <div class="col-sm-3">
+                                <input type="text" id="password" name="password" class="form-control" placeholder="6535678345" required="">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comments" class="col-sm-2 control-label">Comentario</label>
+                            <div class="col-sm-5">
+                                <textarea name="comments" id="comments" cols="40" rows="5" class="form-control"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <input type="submit" class="btn btn-primary" value="Enviar" />
+                                <input type="reset" value="borrar">
+
+                            </div>
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <!--pie de pagina-->
+
+        <!--informacion de las redes sociales-->
+        <hr>
+        <nav class="informaciones">
+            <!--es para que aparesca una linea separadora de la pagina con la 
+        información de contacto-->
+            <br>
+            <p>si quieres saber mas de nosotros contactanos:</p>
+            <section class="buttons">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="twitter"><i class="fab fa-twitter"></i> </a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i> </a>
+            </section>
+            </hr>
+        </nav>
+
+    </footer>
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
+
+  
+    <script src="https://kit.fontawesome.com/84319aa48d.js" crossorigin="anonymous"></script>
+    <script src="fromularioJQUARY.js" ></script>
+    <script src="js/fromularioJQUARY.js"></script>
+</body>
+
+</html>

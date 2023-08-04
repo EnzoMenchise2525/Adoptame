@@ -1,0 +1,21 @@
+{
+    "personas": [{
+            "id": "1",
+            "name": "Juanito Perez",
+            "username": "junitoAlcachofa",
+            "email": "juanito@gmail.com"
+        },
+        {
+            "id": "2",
+            "name": "Pedrito Clavo",
+            "username": "pedritoClavóClavitos",
+            "email": "elPepe@gmail.com"
+        },
+        {
+            "id": "3",
+            "name": "Jorge Ponce",
+            "username": "Jorgito",
+            "email": "jorge@gmail.com"
+        }
+    ]
+}
